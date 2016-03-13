@@ -1,0 +1,61 @@
+.wrapLeft{
+    width:auto;
+    height:1700px;
+    background-image: url('Images/greece.jpg');
+    background-size: cover;
+    -webkit-background-size: cover;
+    font-size: 1.2em;
+}
+
+.jumbotron{
+  background-color: white;
+  opacity: 0.7;
+  border-radius: 20px;
+  text-align: center;
+
+}
+.wrapContent{
+    width: auto;
+    height: auto;
+    background-color: white;
+    opacity: 0.8;
+    border-radius: 20px;
+}
+
+h4{
+  text-align: left;
+}
+
+#enterText{
+  height:60px;
+  border-radius: 10px;
+  opacity: 0.7;
+  color: black;
+  margin-top: 10px;
+}
+
+#enterBtn{
+  width:80px;
+  height:60px;
+  border-radius: 20px;
+  margin-top: 10px;
+
+}
+
+.done{
+    text-decoration:line-through;
+    color: grey;
+}
+
+.list-group{
+margin-top: 10px;
+}
+
+.list-group-item{
+  margin-top: 10px;
+}
+
+.btn-danger {
+  margin-right: 160px;
+  margin-bottom: 10px;
+}

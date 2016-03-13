@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Build Your To-do List</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="todo.js" type="text/javascript"> </script>
+    <link rel="stylesheet" type="text/css" href="todo.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+
+<body ng-app="myList">
+  <div ng-controller="mainCtrl"class=" row col-md-12 wrapLeft">
+
+    <div class="jumbotron">
+      <h1>The Simple To do List</h1>
+      <p> Simple To do list here....</p>
+      <p><a class="btn btn-primary btn-lg" href="#" role="button">Click out my other sample works</a></p>
+  </div>
+
+    <div class="wrapContent">
+      <div class ="col-lg-6 col-lg-offset-2 input-group ">
+        <form name ="frm" ng-submit="add()">
+              <span class="input-group-btn">
+                  <input type="text" class="form-control" id="enterText" ng-model="items" placeholder="Enter your TO DO  items..."required/>
+                   <button class ="btn btn-default"  id="enterBtn" ng-diabled="frm.$invalid"> Enter </button>
+                 </span>
+               </form>
+<!-- <div class ="col-lg-6 col-lg-offset-2 "> -->
+    <ul class="list-group">
+        <li class="list-group-item list-group-item-info" ng-repeat="item in itemList">
+            <input type="checkbox" ng-model="item.done" class="editBox"/>
+                  <span ng-class="{'done':item.done}">
+                      <span ng-click="toEdit()" ng-model="item.title" contentEditable="false">
+                          {{item.title}}
+                      </span>
+                        </span>
+        </li>
+    </ul>
+
+    <button class="btn-danger btn-lg" ng-click="clearCompleted()"> Clear Completed Items</button>
+    <button class="btn-warning btn-lg"  ng-show="hideUdo" ng-click="undo()"> Undo </button>
+    </div>
+</div>
+</div>
+</div>
+
+    </div>
+</div>
+
+<!-- <div class="row col-xs-6 col-md-6">
+
+<div ng-controller="listCtrl">
+
+<h3> BOO BOO NOT SO PATIENT TO DO LIST</h3>
+
+    <form name="frm" ng-submit="add()">
+        <input type="text" ng-model="todoList" required/>
+        <button ng-disable = frm.$invalid> ADD</button>
+    </form>
+    <button ng-click ="clearList()"> Clear Completed Item(s)</button>
+
+    <ul>
+        <li ng-repeat="list in listItem">
+            <input type="checkBox" ng-model="list.done"/>
+                 <span ng-class="{'done':list.done}">
+                     <span ng-click="clickToEdit($index)"  ng-model="list.title" contentEditable="false">
+                        {{list.title}}
+                        </span>
+                     </span>
+        </li>
+
+    </ul>
+</div>
+</div> -->
+</body>
+</html>
